@@ -4,8 +4,7 @@ image: ntwrkguru/pandoc-gitlab-ci
 pages:
   stage: deploy
   script:
-    - apt-get install pip
-    - pip install pyyaml
+    - apt-get install pyyaml
     - python create-lrmi-json-tag.py
     # replace gitlab math with latex math
     - sed -e ':a' -e 'N' -e '$!ba' -e "s/\`\`\`math\n\([^$]*\)\n\`\`\`/\$\$\1\$\$/g" course.md > c1.md
