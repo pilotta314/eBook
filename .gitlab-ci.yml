@@ -1,11 +1,24 @@
-image: alpine:latest
+# image: dalibo/pandocker
+image: ntwrkguru/pandoc-gitlab-ci
 
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+    # replace gitlab math with latex math
+    - sed -e ':a' -e 'N' -e '$!ba' -e "s/\`\`\`math\n\([^$]*\)\n\`\`\`/\$\$\1\$\$/g" course.md > c1.md
+    - sed -e ':a' -e 'N' -e '$!ba' -e "s/\\$\`\([^\`]*\)\`\\$/\$\1\$/g" c1.md > c2.md
+    # generate output files
+    - pandoc title.txt c2.md -f markdown -t epub3 -s -o course.epub --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt c2.md -f markdown -t latex -s -o course.pdf --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt c2.md -f markdown -t html -s -o index.html --metadata pagetitle="Kursbeispiel" --include-in-header=header.xml --katex --css pandoc.css
+    - pandoc title.txt c2.md -f markdown -t asciidoc -s -o course.asc --metadata pagetitle="Kursbeispiel" --webtex
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+    #  --metadata-file=metadata.yml
+
   artifacts:
     paths:
-    - public
+      - public
   only:
   - master
