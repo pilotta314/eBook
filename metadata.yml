@@ -1,0 +1,20 @@
+---
+name: "Solare Wärmegewinne"
+creator:
+  givenName: "Axel"
+  familyNAme: "Klinger"
+publisher:
+  givenName: "Axel"
+  familyNAme: "Klinger"
+keywords:
+  - "Bauphysik"
+  - "Wärmegewinne"
+description: "Gestaltung einer Fassade zur Optimierung der Wärmegewinne"
+inLanguage: "DE"
+version: 1.0
+url: https://axel-klinger.gitlab.io/studienarbeit/index.html
+# dateModified: xxx
+# datePublished: xxx
+license: "https://creativecommons.org/licenses/by-sa/4.0/deed.de"
+thumbnailUrl: http://placehold.it/100x100
+learningResourceType: "Projektarbeit"
