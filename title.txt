@@ -1,5 +1,5 @@
 ---
-title: Der SAtz des Pythagoras
+title: Der Satz des Pythagoras
 author: Axel Klinger
 rights:  Creative Commons Zero
 language: de-DE
