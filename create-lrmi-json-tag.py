@@ -16,5 +16,6 @@ with open("metadata.yml", 'r') as stream:
     #json.dump(data, sys.stdout, indent=4, ensure_ascii=0)
     with open("metadata.json", 'w', encoding='utf8') as outputfile:
         jsonstring = json.dumps(data, indent=4, ensure_ascii=0)
-        tagstring = '<script type="application/ld+json">' + jsonstring + '</script>'
+        tagstring = '<link rel="license" href="' + data['license'] + '"/>'
+        tagstring = tagstring + '<script type="application/ld+json">' + jsonstring + '</script>'
         outputfile.write(tagstring)
