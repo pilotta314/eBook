@@ -13,7 +13,7 @@ with open("metadata.yml", 'r') as stream:
     data['@context'] = 'http://schema.org/'
     data['publisher']['@type'] = 'Person'
     data['creator']['@type'] = 'Person'
-    #json.dump(data, sys.stdout, indent=4, ensure_ascii=0)
+
     with open("metadata.json", 'w', encoding='utf8') as outputfile:
         jsonstring = json.dumps(data, indent=4, ensure_ascii=0)
         tagstring = '<link rel="license" href="' + data['license'] + '"/>'
