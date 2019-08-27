@@ -6,7 +6,7 @@ pages:
   script:
     - apt-get install -y python3
     - apt-get install -y python3-yaml
-    - python create-lrmi-json-tag.py
+    - python3 create-lrmi-json-tag.py
     # replace gitlab math with latex math
     - sed -e ':a' -e 'N' -e '$!ba' -e "s/\`\`\`math\n\([^$]*\)\n\`\`\`/\$\$\1\$\$/g" course.md > c1.md
     - sed -e ':a' -e 'N' -e '$!ba' -e "s/\\$\`\([^\`]*\)\`\\$/\$\1\$/g" c1.md > c2.md
