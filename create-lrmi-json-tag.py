@@ -13,11 +13,6 @@ with open("metadata.yml", 'r') as stream:
     data['publisher']['@type'] = 'Person'
     data['creator']['@type'] = 'Person'
     #json.dump(data, sys.stdout, indent=4, ensure_ascii=0)
-
-    with open("metadata.json", 'w') as outputfile:
-        json.dump(data, outputfile, indent=4, ensure_ascii=0)
-	# import pdb
-	# pdb.set_trace()
-	# data["publisher"].append("@type: person")
-	#print data
-
+    with open("metadata.json", 'w', encoding='utf8') as outputfile:
+        jsonstring = json.dumps(data, indent=4, ensure_ascii=0)
+        outputfile.write(jsonstring)
