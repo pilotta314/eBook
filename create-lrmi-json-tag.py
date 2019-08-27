@@ -19,3 +19,12 @@ with open("metadata.yml", 'r') as stream:
         tagstring = '<link rel="license" href="' + data['license'] + '"/>'
         tagstring = tagstring + '<script type="application/ld+json">' + jsonstring + '</script>'
         outputfile.write(tagstring)
+
+    with open('title.txt', 'w', encoding='utf8') as titlefile:
+        titlecontent = '---\n'
+        titlecontent = titlecontent + 'title: ' + data['name'] + '\n'
+        titlecontent = titlecontent + 'author: ' + data['creator']['givenName'] + ' ' + data['creator']['familyName'] + '\n'
+        titlecontent = titlecontent + 'rights: ' + data['license'] + '\n'
+        titlecontent = titlecontent + 'language: ' + data['inLanguage'] + '\n'
+        titlecontent = titlecontent + '...\n'
+        titlefile.write(titlecontent)

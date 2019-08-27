@@ -1,6 +1,0 @@
----
-title: Der Satz des Pythagoras
-author: Axel Klinger
-rights:  https://creativecommons.org/licenses/by-sa/4.0/deed.de
-language: DE
-...
