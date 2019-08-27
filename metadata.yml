@@ -1,5 +1,5 @@
 ---
-name: "Solare Wärmegewinne"
+name: "Satz des Pythagoras"
 creator:
   givenName: "Axel"
   familyNAme: "Klinger"
@@ -7,14 +7,16 @@ publisher:
   givenName: "Axel"
   familyNAme: "Klinger"
 keywords:
-  - "Bauphysik"
-  - "Wärmegewinne"
-description: "Gestaltung einer Fassade zur Optimierung der Wärmegewinne"
+  - "Geometrie"
+  - "Pythagoras"
+  - "Mathematik"
+description: "Der Satz des Pythagoras"
 inLanguage: "DE"
 version: 1.0
-url: https://axel-klinger.gitlab.io/studienarbeit/index.html
+url: https://tibhannover.gitlab.io/oer/course-metadata-test/index.html
 # dateModified: xxx
 # datePublished: xxx
 license: "https://creativecommons.org/licenses/by-sa/4.0/deed.de"
 thumbnailUrl: http://placehold.it/100x100
-learningResourceType: "Projektarbeit"
+learningResourceType: "Modul"
+---
