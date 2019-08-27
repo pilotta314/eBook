@@ -10,6 +10,7 @@ with open("metadata.yml", 'r') as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
+    data['@context'] = 'http://schema.org/'
     data['publisher']['@type'] = 'Person'
     data['creator']['@type'] = 'Person'
     #json.dump(data, sys.stdout, indent=4, ensure_ascii=0)
