@@ -17,7 +17,7 @@ a^2 + b^2 = c^2
 
 ...
 
-<iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0"></iframe>
 
 ## Anwendung
 
