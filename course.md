@@ -11,15 +11,17 @@ Grafik "Rechtwinkliges Dreieck, Satz des Pythagoras" von [Petrus3743](https://co
 a^2 + b^2 = c^2
 ```
 
-## Beispielvideo
+## Beispielvideo (Test)
+
+a) Placeholder with Link to Youtube
 
 [![Entwicklungsumgebung mit Groovy/Git testen](https://img.youtube.com/vi/fbZOii_l7M4/maxresdefault.jpg)](https://youtu.be/fbZOii_l7M4)
 
-...
+b) AV-Portal Player embedded
 
 <iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0"></iframe>
 
-...
+c) Youtube embedded
 
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/fbZOii_l7M4">
