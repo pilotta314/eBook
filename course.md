@@ -19,13 +19,17 @@ a) Placeholder with Link to Youtube
 
 b) AV-Portal Player embedded
 
-<iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0"></iframe>
+<iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 c) Youtube embedded
 
 <iframe width="420" height="315"
-src="https://www.youtube.com/embed/fbZOii_l7M4">
+src="https://www.youtube.com/embed/fbZOii_l7M4" allowfullscreen="allowfullscreen">
 </iframe>
+
+## H5P Test
+
+<iframe src="https://h5p.org/h5p/embed/617" width="545" height="337" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Anwendung
 
