@@ -19,7 +19,7 @@ a) Placeholder with Link to Youtube
 
 b) AV-Portal Player embedded
 
-<iframe width="560" height="315" scrolling="no" src="http://av.tib.eu/player/40456" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="560" height="315" scrolling="no" src="//av.tib.eu/player/40456" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 c) Youtube embedded
 
