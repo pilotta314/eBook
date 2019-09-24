@@ -3,7 +3,7 @@ preparepandoc:
   image: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation
   stage: build
   script:
-    - course.md
+    - /build/pandoc-preparation.sh course.md
   artifacts:
     untracked: true
     expire_in: 5min
