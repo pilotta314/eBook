@@ -6,7 +6,7 @@ preparepandoc:
     - course.md
   artifacts:
     untracked: true
-    expire_in: 300
+    expire_in: 5min
 
 pages:
   image: ntwrkguru/pandoc-gitlab-ci
