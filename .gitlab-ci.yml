@@ -1,8 +1,9 @@
 
 preparepandoc:
-  image: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation
+  image:
+    name: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation
+    entrypoint: [""]
   stage: build
-  entrypoint: [""]
   script:
     - /build/pandoc-preparation.sh course.md
   artifacts:
