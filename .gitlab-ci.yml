@@ -1,25 +1,28 @@
-# image: dalibo/pandocker
-image: ntwrkguru/pandoc-gitlab-ci
+
+preparepandoc:
+  image: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation/master
+  stage: build
+  script:
+    - course.md
+  artifacts:
+    untracked: true
+    expire_in: 300
 
 pages:
+  image: ntwrkguru/pandoc-gitlab-ci
   stage: deploy
+  dependencies:
+    - preparepandoc
   script:
-    - apt-get install -y python3
-    - apt-get install -y python3-yaml
-    - python3 create-lrmi-json-tag.py
-    # replace gitlab math with latex math
-    - sed -e ':a' -e 'N' -e '$!ba' -e "s/\`\`\`math\n\([^$]*\)\n\`\`\`/\$\$\1\$\$/g" course.md > c1.md
-    - sed -e ':a' -e 'N' -e '$!ba' -e "s/\\$\`\([^\`]*\)\`\\$/\$\1\$/g" c1.md > c2.md
+    - ls -l
     # generate output files
-    - pandoc title.txt c2.md -f markdown -t epub3 -s -o course.epub --metadata pagetitle="Kursbeispiel" --webtex
-    - pandoc title.txt c2.md -f markdown -t latex -s -o course.pdf --metadata pagetitle="Kursbeispiel" --webtex
-    - pandoc title.txt c2.md -f markdown -t html -s -o index.html --metadata pagetitle="Kursbeispiel" --include-in-header=metadata.json --katex --css pandoc.css
-    - pandoc title.txt c2.md -f markdown -t asciidoc -s -o course.asc --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt course-prepared.md -f markdown -t epub3 -s -o course.epub --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt course-prepared.md -f markdown -t latex -s -o course.pdf --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt course-prepared.md -f markdown -t html -s -o index.html --metadata pagetitle="Kursbeispiel" --include-in-header=metadata.json --katex --css pandoc.css
+    - pandoc title.txt course-prepared.md -f markdown -t asciidoc -s -o course.asc --metadata pagetitle="Kursbeispiel" --webtex
     - mkdir .public
     - cp -r * .public
     - mv .public public
-    #  --metadata-file=metadata.yml
-
   artifacts:
     paths:
       - public
