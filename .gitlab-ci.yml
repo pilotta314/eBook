@@ -1,6 +1,6 @@
 
 preparepandoc:
-  image: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation/master
+  image: registry.gitlab.com/tibhannover/oer/course-pandoc-preparation
   stage: build
   script:
     - course.md
