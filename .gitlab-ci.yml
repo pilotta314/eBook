@@ -11,7 +11,9 @@ preparepandoc:
     expire_in: 5min
 
 pages:
-  image: ntwrkguru/pandoc-gitlab-ci
+  image:
+    name: pandoc/latex:2.7
+    entrypoint: [""]
   stage: deploy
   dependencies:
     - preparepandoc
