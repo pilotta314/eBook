@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import yaml
 import json
 import requests
 import re
@@ -46,7 +47,34 @@ for treffer in images:
             # print(tullu)
             text = re.sub("!\[" + description + "\]\(" + link + "\)", "![" + description + "](" + link + ")" + "  \n" + tullu, text)
 
+course_license = ""
+ATTRIBUTES = dict(
+    by = 'Attribution',
+    nc = 'Non-Commercial',
+    nd = 'No Derivatives',
+    sa = 'Share-Alike',
+    )
+
+with open("metadata.yml", 'r') as course_metadata:
+    try:
+        data = yaml.safe_load(course_metadata)
+    except yaml.YAMLError as exc:
+        print(exc)
+
+    course_title = data["name"]
+    course_url = data["url"]
+    course_author = data["creator"]["givenName"] + " " + data["creator"]["familyName"]
+    # course_author_url = 
+
+    course_license_url = data["license"]
+    course_license_components = re.findall("licenses\/([^\/]*)\/([^\/]*)", course_license_url)
+    course_license_code = course_license_components[0][0]
+    course_license_version = course_license_components[0][1]
+    course_license_short_name = "CC " + course_license_code.upper() + " " + course_license_version
+
+    course_license_text = "Dieses Werk und dessen Inhalte sind - sofern nicht anders angegeben - lizenziert unter " + course_license_short_name + ". Nennung gemäß [TULLU-Regel](https://open-educational-resources.de/oer-tullu-regel/) bitte wie folgt: " + "\"[" + course_title + "](" + course_url + ")\" von " + course_author + ", Lizenz: [" + course_license_short_name + "](" + course_license_url + ")"
+
 course_tagged = open("course-tagged.md", "w")
-course_tagged.write(text)
+course_tagged.write(text + "\n\n" + course_license_text)
 course_tagged.close()
 course.close()
