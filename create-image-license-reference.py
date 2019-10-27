@@ -37,11 +37,12 @@ for treffer in images:
             image_info = v["imageinfo"][0]
             image_title = image_info["extmetadata"]["ObjectName"]["value"]
             image_author = image_info["user"]
+            image_author_link = "https://commons.wikimedia.org/wiki/User:" + image_author
             image_page = image_info["descriptionurl"]
             license_name = image_info["extmetadata"]["UsageTerms"]["value"]
             license_short_name = image_info["extmetadata"]["LicenseShortName"]["value"]
             license_url = image_info["extmetadata"]["LicenseUrl"]["value"]
-            tullu = ("\"" + image_title + "\" von " + image_author + " unter ["  + license_short_name + "](" + license_url + ") auf [Wikimedia Commons](" + image_page + ")")
+            tullu = ("\"" + image_title + "\" von [" + image_author + "](" + image_author_link + ") unter ["  + license_short_name + "](" + license_url + ") auf [Wikimedia Commons](" + image_page + ")")
             # print(tullu)
             text = re.sub("!\[" + description + "\]\(" + link + "\)", "![" + description + "](" + link + ")" + "  \n" + tullu, text)
 
