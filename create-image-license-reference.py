@@ -11,44 +11,43 @@ course = open("course.md", "rt")
 text = course.read()
 images = re.findall("!\[([^\]]*)\]\(([^\)]*)\)", text)
 for treffer in images:
-    if "wikimedia" in treffer[1]:
-        description = treffer[0]
-        link = treffer[1]
+    description = treffer[0]
+    link = treffer[1]
+    if "wikimedia" in link:
         print("TREFFER : " + description + " " + link)
-        image = re.findall("\/([^\/]*)$", link)[0]
-        # print(image)
+        image_name = re.findall("\/([^\/]*)$", link)[0]
+        # print(image_name)
 
-        # get image metadata
-        S = requests.Session()
-        URL = "https://en.wikipedia.org/w/api.php"
-        title = "File:" + image
-        PARAMS_IMAGE = {
+        # get image_name metadata
+        session = requests.Session()
+        api_url = "https://en.wikipedia.org/w/api.php"
+        title = "File:" + image_name
+        params_image = {
             "action": "query",
             "format": "json",
             "prop": "imageinfo",
-            "titles": "File:" + image
+            "titles": "File:" + image_name
         }
-        PARAMS_RIGHTS = {
+        params_rights = {
             "action": "query",
             "format": "json",
             "meta" : "siteinfo",
             "siprop" : "rightsinfo",
-            "titles": "File:" + image
+            "titles": "File:" + image_name
         }
 
-        I = S.get(url=URL, params=PARAMS_IMAGE)
-        R = S.get(url=URL, params=PARAMS_RIGHTS)
-        IDATA = I.json()
-        RDATA = R.json()
-        # print(IDATA)
-        # print(RDATA)
+        image_data = session.get(url=api_url, params=params_image).json()
+        rights_data = session.get(url=api_url, params=params_rights).json()
+        # print(image_data)
+        # print(rights_data)
 
-        IPAGES = IDATA["query"]["pages"]
-        RPAGES = RDATA["query"]["rightsinfo"]
-        # print(RPAGES)
+        IPAGES = image_data["query"]["pages"]
+        rights = rights_data["query"]["rightsinfo"]
+        # print(IPAGES)
+        # print(rights)
 
         for k, v in IPAGES.items():
-            print("ERGEBNIS : " + v["title"] + " is uploaded by User:" + v["imageinfo"][0]["user"] + " under "  + RPAGES["text"])
+            print("ERGEBNIS : " + v["title"] + " is uploaded by User:" + v["imageinfo"][0]["user"] + " under "  + rights["text"])
 
 
 course.close()
