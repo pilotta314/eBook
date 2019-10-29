@@ -25,3 +25,8 @@ Dieses Projekt als Vorlage für eigene Kurse verwenden.
 * Links in der README.md anpassen
 
 Beim ersten Durchlauf kann es bis zu ca. 15min dauern, bis die Dateien generiert sind. Weitere Änderungen stehen i.d.R. nach <1min bereit.
+
+# Updates
+
+* 2019-10-28 - Automatische TULLU-Regel für Wikimedia Bilder
+* 2019-10-28 - Automatischer Lizenzhinweis auf Basis der Metadaten in metadata.yml
