@@ -24,10 +24,10 @@ pages:
   script:
     - ls -l
     # generate output files
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME.md -f markdown -t epub3 -s -o $MARKDOWN_SOURCE_FILENAME.epub --metadata pagetitle="Kursbeispiel" --webtex
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME.md -f markdown -t latex -s -o $MARKDOWN_SOURCE_FILENAME.pdf --metadata pagetitle="Kursbeispiel" --webtex
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME.md -f markdown -t html -s -o index.html --metadata pagetitle="Kursbeispiel" --include-in-header=metadata.json --katex --css pandoc.css
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME.md -f markdown -t asciidoc -s -o $MARKDOWN_SOURCE_FILENAME.asc --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t epub3 -s -o $MARKDOWN_SOURCE_FILENAME.epub --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t latex -s -o $MARKDOWN_SOURCE_FILENAME.pdf --metadata pagetitle="Kursbeispiel" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t html -s -o index.html --metadata pagetitle="Kursbeispiel" --include-in-header=metadata.json --katex --css pandoc.css
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t asciidoc -s -o $MARKDOWN_SOURCE_FILENAME.asc --metadata pagetitle="Kursbeispiel" --webtex
     - mkdir .public
     - cp -r * .public
     - mv .public public
