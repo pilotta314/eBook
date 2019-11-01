@@ -9,7 +9,7 @@ preparepandoc:
     entrypoint: [""]
   stage: build
   script:
-    - /build/pandoc-preparation.sh $MARKDOWN_SOURCE_FILENAME.md
+    - /build/pandoc-preparation.sh $MARKDOWN_SOURCE_FILENAME
   artifacts:
     untracked: true
     expire_in: 5min
