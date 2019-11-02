@@ -25,13 +25,6 @@ Dieses Projekt als Vorlage für eigene Kurse verwenden.
 
 Beim ersten Durchlauf kann es bis zu ca. 15min dauern, bis die Dateien generiert sind. Weitere Änderungen stehen i.d.R. nach <1min bereit.
 
-# Auffindbar machen
-
-Wenn der Kurs die ersten erkennbaren Inhalte enthält, kann er auf einem der Landesportale veröffentlicht werden.
-
-* [Niedersachsen](http://service.tib.eu/edu-sharing/components/search) oder Projekt-URL per [Mail](mailto:support.oer-nds@tib.eu)
-* [Baden-Württemberg](https://www.oerbw.de/edu-sharing/components/search)
-* ...
 
 # Updates
 
