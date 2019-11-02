@@ -1,6 +1,6 @@
-# Course Metadata Test
+# Vorlage für OER-Kurse
 
-Prototyp für eine Kursvorlage mit Unterstützung bei Metadaten und Lizenzen.
+Prototyp für eine Kursvorlage mit Unterstützung bei Metadaten und Lizenzen. Die Vorlage kann auch für andere Text, wie z.B. Studien- oder Masterarbeiten verwendet werden.
 
 * generiert Metadaten in HTML-Header für OER Repositories and Google Search
 * ergänzt Lizenzhinweise nach TULLU-Regel für Wikimedia-Bilder automatisch
@@ -24,6 +24,14 @@ Dieses Projekt als Vorlage für eigene Kurse verwenden.
 * Links in der README.md anpassen
 
 Beim ersten Durchlauf kann es bis zu ca. 15min dauern, bis die Dateien generiert sind. Weitere Änderungen stehen i.d.R. nach <1min bereit.
+
+# Auffindbar machen
+
+Wenn der Kurs die ersten erkennbaren Inhalte enthält, kann er auf einem der Landesportale veröffentlicht werden.
+
+* [Niedersachsen](http://service.tib.eu/edu-sharing/components/search) oder Projekt-URL per [Mail](mailto:support.oer-nds@tib.eu)
+* [Baden-Württemberg](https://www.oerbw.de/edu-sharing/components/search)
+* ...
 
 # Updates
 
