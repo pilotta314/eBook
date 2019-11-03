@@ -1,8 +1,6 @@
 variables:
   #Name of the Markdown-Sourcefile without suffix
   MARKDOWN_SOURCE_FILENAME: "course"
-  # get the title from metadata.yml
-  TITLE: "$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')"
 
 preparepandoc:
   image:
@@ -25,10 +23,10 @@ pages:
   script:
     - ls -l
     # generate output files
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t epub3 -s -o $MARKDOWN_SOURCE_FILENAME.epub --metadata pagetitle="$TITLE" --webtex
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t latex -s -o $MARKDOWN_SOURCE_FILENAME.pdf --metadata pagetitle="$TITLE" --webtex
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t html -s -o index.html --metadata pagetitle="$TITLE" --include-in-header=metadata.json --katex --css pandoc.css
-    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t asciidoc -s -o $MARKDOWN_SOURCE_FILENAME.asc --metadata pagetitle="$TITLE" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t epub3 -s -o $MARKDOWN_SOURCE_FILENAME.epub --metadata pagetitle="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t latex -s -o $MARKDOWN_SOURCE_FILENAME.pdf --metadata pagetitle="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')" --webtex
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t html -s -o index.html --metadata pagetitle="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')" --include-in-header=metadata.json --katex --css pandoc.css
+    - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t asciidoc -s -o $MARKDOWN_SOURCE_FILENAME.asc --metadata pagetitle="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')" --webtex
     - mkdir .public
     - cp -r * .public
     - mv .public public
