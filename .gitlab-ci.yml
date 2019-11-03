@@ -1,7 +1,7 @@
 variables:
   #Name of the Markdown-Sourcefile without suffix
   MARKDOWN_SOURCE_FILENAME: "course"
-  TITLE: "Kursbeispiel"
+  TITLE: "$CI_PROJECT_NAME"
 
 preparepandoc:
   image:
