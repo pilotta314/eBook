@@ -1,4 +1,3 @@
-
 variables:
   #Name of the Markdown-Sourcefile without suffix
   MARKDOWN_SOURCE_FILENAME: "course"
@@ -24,7 +23,7 @@ pages:
   script:
     - ls -l
     # get the title from metadata.yml
-    TITLE="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')"
+    - TITLE="$(grep -o 'name: .*' metadata.yml | sed -E 's/name: "(.*)"/\1/g')"
     # generate output files
     - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t epub3 -s -o $MARKDOWN_SOURCE_FILENAME.epub --metadata pagetitle="$TITLE" --webtex
     - pandoc title.txt $MARKDOWN_SOURCE_FILENAME-prepared.md -f markdown -t latex -s -o $MARKDOWN_SOURCE_FILENAME.pdf --metadata pagetitle="$TITLE" --webtex
