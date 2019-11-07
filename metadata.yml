@@ -1,18 +1,18 @@
 ---
-name: "Satz des Pythagoras"
+name: "Mein OER Kurs"
 creator:
-  givenName: "Axel"
-  familyName: "Klinger"
+  givenName: "Max"
+  familyName: "Mustermann"
 publisher:
-  givenName: "Axel"
-  familyName: "Klinger"
+  givenName: "Max"
+  familyName: "Mustermann"
 keywords:
   - "Geometrie"
   - "Pythagoras"
   - "Mathematik"
-description: "Der Satz des Pythagoras"
+description: "Skizze für einen Kurs"
 inLanguage: "DE"
 version: 1.0
-license: "https://creativecommons.org/licenses/by-sa/4.0/deed.de"
+license: "https://creativecommons.org/licenses/by/4.0/deed.de"
 thumbnailUrl: http://placehold.it/100x100
 learningResourceType: "Modul"
