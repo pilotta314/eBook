@@ -1,5 +1,7 @@
 # Vorlage für OER-Kurse
 
+Diese Vorlage für OER Kurse ist freigegeben unter CC-0 / Public domain. Die Inhalte des Kurses unterliegen der jeweiligen Lizenz, wie sie am Ende der generierten Dateien bzw. in der metadata.yml angegeben sind.
+
 Prototyp für eine Kursvorlage mit Unterstützung bei Metadaten und Lizenzen. Die Vorlage kann auch für andere Text, wie z.B. Studien- oder Masterarbeiten verwendet werden.
 
 * generiert Metadaten in HTML-Header für OER Repositories and Google Search
