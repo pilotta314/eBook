@@ -30,5 +30,6 @@ Beim ersten Durchlauf kann es bis zu ca. 15min dauern, bis die Dateien generiert
 
 # Updates
 
+* 2019-11-07 - Machinenlesbare Auszeichnung der Bilder nach CC REL
 * 2019-10-28 - Automatische TULLU-Regel für Wikimedia Bilder
 * 2019-10-28 - Automatischer Lizenzhinweis auf Basis der Metadaten in metadata.yml
