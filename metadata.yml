@@ -1,11 +1,11 @@
 ---
-name: "Mein OER Kurs"
+name: "Online-Brückenkurs Physik"
 creator:
-  givenName: "Max"
-  familyName: "Mustermann"
+  givenName: "Stina"
+  familyName: "Schäfer"
 publisher:
-  givenName: "Max"
-  familyName: "Mustermann"
+  givenName: "Stina"
+  familyName: "Schäfer"
 keywords:
   - "Geometrie"
   - "Pythagoras"
