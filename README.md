@@ -10,7 +10,7 @@ Mit jedem Speichern (Commit) werden die folgenden Dokumente generiert
 
 * [Kurs als Ebook](https://github.com/pilotta314/eBook/course.epub)
 * [Kurs als PDF](https://github.com/pilotta314/eBook/course.pdf)
-* [Kurs als HTML](https://pilotta314.github.io/ebook/)
+* [Kurs als HTML](https://pilotta314.github.io/ebook/#/)
 
 # Nachnutzung
 
