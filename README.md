@@ -8,9 +8,9 @@ Dies ist eine Vorlage für offene und frei lizenzierte Texte, die ansprechende, 
 
 Mit jedem Speichern (Commit) werden die folgenden Dokumente generiert
 
-* [Kurs als Ebook](https://tibhannover.gitlab.io/oer/course-metadata-test/course.epub)
-* [Kurs als PDF](https://tibhannover.gitlab.io/oer/course-metadata-test/course.pdf)
-* [Kurs als HTML](https://tibhannover.gitlab.io/oer/course-metadata-test/index.html)
+* [Kurs als Ebook](https://github.com/pilotta314/eBook/course.epub)
+* [Kurs als PDF](https://github.com/pilotta314/eBook/course.pdf)
+* [Kurs als HTML](https://github.com/pilotta314/eBook/index.html)
 
 # Nachnutzung
 
